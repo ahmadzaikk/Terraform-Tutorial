@@ -49,6 +49,6 @@ data "aws_iam_policy_document" "default" {
 }
 
 resource "aws_elasticsearch_domain_policy" "default" {
-  domain_name     = "easyaws"
+  domain_name     = "khalid-test"
   access_policies = join("", data.aws_iam_policy_document.default.*.json)
 }

@@ -1,30 +1,30 @@
 variable "region" {
-  type    = "string"
-  default = "us-east-2"
+  type    = string
+  default = "us-west-2"
 }
 
 variable "domain_name" {
   type        = string
-  default     = "easyaws"
+  default     = "khalid-test"
   description = "name of Elasticsearch Domain"
 }
 
 variable "elasticsearch_version" {
   type        = string
-  default     = "6.5"
+  default     = "7.7"
   description = "Version of Elasticsearch to deploy"
 }
 
 variable "instance_type" {
   type        = string
-  default     = "t2.small.elasticsearch"
+  default     = "m4.large.elasticsearch"
   description = "Elasticsearch instance type for data nodes in the cluster"
 }
 
 variable "instance_count" {
   type        = number
   description = "Number of data nodes in the cluster"
-  default     = 1
+  default     = 2
 }
 
 variable "zone_awareness_enabled" {
